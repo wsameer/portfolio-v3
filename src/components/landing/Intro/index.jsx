@@ -1,24 +1,36 @@
 import React from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import { Header } from 'components/theme';
 import { Container, Button } from 'components/common';
-import dev from 'assets/illustrations/dev.svg';
-import { Wrapper, IntroWrapper, Details, Thumbnail } from './styles';
+import SocialIcons from 'components/theme/Footer/social.json';
+import { Wrapper, IntroWrapper, LineElement, Details, ListLine, ListLineItems, HorizLine } from './styles';
+
+const Links = SocialIcons.map((item, index) => (
+  <ListLineItems key={index}>
+    <a href={item.link} target="_blank" rel="noopener noreferrer">
+      <img src={item.icon} alt=""></img>
+    </a>
+  </ListLineItems>
+));
 
 export const Intro = () => (
   <Wrapper>
-    <Header />
     <IntroWrapper as={Container}>
-      <Details>
-        <h1>Hi There!</h1>
-        <h4>I’m John and I’m a JAMStack engineer!</h4>
-        <Button as={AnchorLink} href="#contact">
-          Hire me
-        </Button>
-      </Details>
-      <Thumbnail>
-        <img src={dev} alt="I’m John and I’m a JAMStack engineer!" />
-      </Thumbnail>
+      <LineElement>
+        <ListLine>
+          <ListLineItems>
+            <HorizLine />
+          </ListLineItems>
+          {Links}
+        </ListLine>
+        <Details>
+          <h3>Hi there, I'm</h3>
+          <h1>Sameer Waskar.</h1>
+          <p>I'm a Full Stack Engineer based in Pune, India.</p>
+          <Button as={AnchorLink} href="#contact">
+            Get in touch
+          </Button>
+        </Details>
+      </LineElement>
     </IntroWrapper>
   </Wrapper>
 );
