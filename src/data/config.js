@@ -1,12 +1,11 @@
 module.exports = {
   defaultTitle: 'Sameer Waskar',
-  logo: 'https://portfolio.smakosh.com/favicon/favicon-512.png',
+  logo: 'https://wsameer.github.io/v1/img/sameer-logo.svg',
   author: 'Sameer Waskar',
-  url: 'https://portfolio.smakosh.com',
+  url: 'https://wsameer.github.io/v1/',
   legalName: 'Sameer Waskar',
   defaultDescription: 'I’m Sameer and I’m a Full stack engineer!',
   socialLinks: {
-    twitter: 'http://www.twitter.com/wsameer',
     github: 'https://github.com/wsameer',
     linkedin: 'https://www.linkedin.com/in/wsameer',
     instagram: 'https://instagram.com/the_savage_lens',
@@ -16,18 +15,14 @@ module.exports = {
   // googleAnalyticsID: 'UA-88875900-4',
   themeColor: '#6b63ff',
   backgroundColor: '#6b63ff',
-  social: {
-    facebook: 'appId',
-    twitter: '@smakosh',
-  },
   address: {
-    city: 'City',
-    region: 'Region',
-    country: 'Country',
-    zipCode: 'ZipCode',
+    city: 'Pune',
+    state: 'Maharashtra',
+    country: 'India',
+    zipCode: '411030',
   },
   contact: {
-    email: 'email',
+    email: 'dev.wsameer@gmail.com',
     phone: 'phone number',
   },
   foundingDate: '2020',
