@@ -35,7 +35,7 @@ export const Details = styled.div`
   }
 
   h3 {
-    font-size: 2.75rem;
+    font-size: 2rem;
     font-weight: 400;
     color: #f4eeeb;
     margin-bottom: 15px;
