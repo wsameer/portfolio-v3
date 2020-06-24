@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 export const Button = styled.button`
   cursor: pointer;
-  border-radius: 3px;
-  padding: 0.7rem 2.5rem;
+  border-radius: 20px;
+  padding: 0.7rem 1.5rem;
   border: none;
   -webkit-appearance: none;
   -webkit-touch-callout: none;
@@ -12,8 +12,8 @@ export const Button = styled.button`
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  color: #fff;
-  background: #0074d9;
+  color: #f4eeeb;
+  background: #fe5029;
 
   &:focus {
     outline: none;
