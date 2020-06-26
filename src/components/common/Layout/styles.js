@@ -1,8 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
 
-export const Global = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
   html {
-    font-family: 'Roboto', Helvetica, sans-serif;
+    font-family: 'Ubuntu', Helvetica, sans-serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
 
@@ -694,10 +694,11 @@ export const Global = createGlobalStyle`
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Roboto', Helvetica, sans-serif;
-      color: hsla(0, 0%, 0%, 0.8);
+      font-family: 'Ubuntu', Helvetica, sans-serif;
+      color: #fff;
       font-weight: normal;
       word-wrap: break-word;
+      background-color: #2d3031;
       font-kerning: normal;
       -moz-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
       -ms-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
