@@ -35,7 +35,7 @@ export const Details = styled.div`
   }
 
   h3 {
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 400;
     color: #f4eeeb;
     margin-bottom: 15px;
@@ -48,7 +48,7 @@ export const Details = styled.div`
   }
 
   h1 {
-    font-size: 2.75rem;
+    font-size: 2.5rem;
     color: #f4eeeb;
     font-weight: 400;
     letter-spacing: 0.1rem;
@@ -83,7 +83,7 @@ export const LineElement = styled.div`
   @media (min-width: 992px) {
     margin-left: -10px;
     background-size: 180px;
-    padding-top: 30px;
+    padding-top: 15px;
   }
 `;
 
@@ -91,19 +91,33 @@ export const ListLine = styled.ul`
   padding-left: 0;
   list-style: none;
   margin: 1.5rem 0;
+  padding-top: 10px;
 `;
 
 export const ListLineItems = styled.li`
   display: inline-block;
   margin-right: 1rem;
 
+  &:nth-child(1) {
+    margin-right: 5px;
+    margin-bottom: 10px;
+  }
+
   img {
-    height: 26px;
+    height: 22px;
   }
 
   /* Medium devices (tablets, 768px and up) */
   @media (min-width: 768px) {
-    margin-right: 1rem;
+    margin-right: 1.2rem;
+
+    &:nth-child(1) {
+      margin-right: 15px;
+    }
+
+    img {
+      height: 26px;
+    }
   }
 `;
 
