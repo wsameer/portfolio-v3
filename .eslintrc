@@ -1,7 +1,9 @@
 {
-  "extends": ["wesbos"],
+  "extends": [
+    "wesbos"
+  ],
   "rules": {
-    "no-console": 2,
+    "no-console": "off",
     "import/no-unresolved": 0,
     "react/display-name": 0,
     "react/prop-types": 0,
