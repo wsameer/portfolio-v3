@@ -693,6 +693,7 @@ export const GlobalStyle = createGlobalStyle`
     
     body {
       margin: 0;
+      margin-top: 70px;
       padding: 0;
       font-family: 'Ubuntu', Helvetica, sans-serif;
       color: #fff;
