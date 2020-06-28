@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
+export const ContactWrapper = styled.div`
   padding: 4rem 0;
-  display: flex;
-  align-items: flex-start;
+  display: block;
   justify-content: space-between;
 
   @media (max-width: 960px) {
@@ -11,8 +10,14 @@ export const Wrapper = styled.div`
   }
 `;
 
+export const PageTitle = styled.h2`
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 3rem;
+`;
+
 export const Details = styled.div`
-  flex: 1;
   padding-right: 2rem;
 
   @media (max-width: 960px) {
@@ -37,8 +42,6 @@ export const Details = styled.div`
 `;
 
 export const Thumbnail = styled.div`
-  flex: 1;
-
   @media (max-width: 960px) {
     width: 100%;
     margin-bottom: 2rem;

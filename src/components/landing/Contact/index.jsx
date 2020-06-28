@@ -1,16 +1,23 @@
 import React from 'react';
-import { Container } from 'components/common';
+import { Container, Row, Col } from 'components/common';
 import contact from 'assets/illustrations/contact.svg';
-import { Wrapper, Details, Thumbnail } from './styles';
+import { ContactWrapper, Details, Thumbnail, PageTitle } from './styles';
 import ContactForm from './ContactForm';
 
 export const Contact = () => (
-  <Wrapper as={Container} id="contact">
-    <Details>
-      <ContactForm />
-    </Details>
-    <Thumbnail>
-      <img src={contact} alt="I’m John and I’m a Backend & Devops engineer!" />
-    </Thumbnail>
-  </Wrapper>
+  <ContactWrapper as={Container} id="contact">
+    <PageTitle>Let's Build Something Together</PageTitle>
+    <Row>
+      <Col sm={6}>
+        <Details>
+          <ContactForm />
+        </Details>
+      </Col>
+      <Col sm={6}>
+        <Thumbnail>
+          <img src={contact} alt="I’m Sameer and I’m a Full stack engineer!" />
+        </Thumbnail>
+      </Col>
+    </Row>
+  </ContactWrapper>
 );
