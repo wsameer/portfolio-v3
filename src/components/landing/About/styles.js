@@ -21,13 +21,12 @@ export const AboutWrapper = styled.div`
 
   /* Medium devices (tablets, 768px and up) */
   @media (min-width: 768px) {
-    margin-top: 2rem;
     flex-direction: column;
   }
 `;
 
 export const PageTitle = styled.h2`
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 500;
   line-height: 1.2;
   margin-bottom: 3rem;
