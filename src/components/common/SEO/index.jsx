@@ -11,7 +11,7 @@ import {
   legalName,
   foundingDate,
   logo,
-} from 'data/config';
+} from 'config/index.js';
 
 export const SEO = ({ title = defaultTitle, description = defaultDescription, location = '' }) => {
   const structuredDataOrganization = `{ 
