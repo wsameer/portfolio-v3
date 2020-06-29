@@ -1,11 +1,11 @@
 import React from 'react';
 import { Container } from 'components/common';
-import { Wrapper, ExperienceWrapper } from './styles';
+import { ExperienceSection, ExperienceWrapper, PageTitle } from './styles';
 
 export const Experience = () => (
-  <Wrapper id="experience">
+  <ExperienceSection id="experience">
     <ExperienceWrapper as={Container}>
-      <h2>Experience</h2>
+      <PageTitle>Experience & Education</PageTitle>
     </ExperienceWrapper>
-  </Wrapper>
+  </ExperienceSection>
 );
