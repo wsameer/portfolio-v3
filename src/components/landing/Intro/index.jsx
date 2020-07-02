@@ -1,8 +1,10 @@
 import React from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { Container, Button } from 'components/common';
-import SocialIcons from 'components/theme/Footer/social.json';
-import { Wrapper, IntroWrapper, LineElement, Details, ListLine, ListLineItems, HorizLine } from './styles';
+import { SocialIcons } from '../../../config';
+import { IntroSection, IntroWrapper, LineElement, Details, ListLine, ListLineItems, HorizLine } from './styles';
+
+console.log(SocialIcons);
 
 const Links = SocialIcons.map((item, index) => (
   <ListLineItems key={index}>
@@ -13,7 +15,7 @@ const Links = SocialIcons.map((item, index) => (
 ));
 
 export const Intro = () => (
-  <Wrapper>
+  <IntroSection id="intro">
     <IntroWrapper as={Container}>
       <LineElement>
         <ListLine>
@@ -32,5 +34,5 @@ export const Intro = () => (
         </Details>
       </LineElement>
     </IntroWrapper>
-  </Wrapper>
+  </IntroSection>
 );
