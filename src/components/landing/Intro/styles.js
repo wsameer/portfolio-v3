@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
+export const IntroSection = styled.div`
   padding-bottom: 4rem;
   background-size: contain;
   background-position: right top;
