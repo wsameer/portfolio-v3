@@ -1,11 +1,23 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import styled from 'styled-components';
 import NavbarLinks from './NavbarLinks';
-import { NavbarCollapseWrapper } from './styles';
 
-const NavbarCollapse = ({ sidebar, toggle }) => (
-  <NavbarCollapseWrapper active={sidebar} onClick={toggle}>
-    <NavbarLinks />
+const NavbarCollapseWrapper = styled.div`
+  transition: height 0.35s ease;
+  background-color: #2d3031;
+  z-index: 4;
+  overflow-y: auto;
+
+  ${({ sidebarOpen }) => (sidebarOpen ? `display: block;` : `display: none;`)}
+
+  @media only screen and(min-width: 992px) {
+    display: none;
+  }
+`;
+
+const NavbarCollapse = ({ sidebar, toggleSidebar }) => (
+  <NavbarCollapseWrapper sidebarOpen={sidebar} onClick={toggleSidebar}>
+    <NavbarLinks toggleSidebar={toggleSidebar} />
   </NavbarCollapseWrapper>
 );
 
