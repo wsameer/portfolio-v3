@@ -1,12 +1,62 @@
 import React from 'react';
 import { Container } from 'components/common';
-import { Wrapper, Flex, Links, Details } from './styles';
-import social from './social.json';
+import footerIllustration from 'assets/illustrations/footer.svg';
+import styled from 'styled-components';
+import { SocialIcons } from '../../../config';
+
+const StyledFooterWrapper = styled.div`
+  padding: 28rem 0 4rem 0;
+  background-image: url(${footerIllustration});
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  color: #000;
+
+  @media (max-width: 1960px) {
+    padding: 14rem 0 4rem;
+  }
+`;
+
+const StyledFlex = styled.div`
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  @media (max-width: 680px) {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+`;
+
+const StyledLinks = styled.div`
+  display: flex;
+  align-items: center;
+
+  a {
+    margin: 0 0.5rem;
+
+    img {
+      margin: 0;
+    }
+
+    &:first-child,
+    &:last-child {
+      margin: 0;
+    }
+  }
+`;
+
+const StyledDetails = styled.div`
+  @media (max-width: 680px) {
+    margin-bottom: 2rem;
+  }
+`;
 
 export const Footer = () => (
-  <Wrapper>
-    <Flex as={Container}>
-      <Details>
+  <StyledFooterWrapper>
+    <StyledFlex as={Container}>
+      <StyledDetails>
         <h2>Sameer Waskar</h2>
         <span>
           © All rights are reserved | {new Date().getFullYear()} | Made with{' '}
@@ -18,14 +68,14 @@ export const Footer = () => (
             Sameer
           </a>
         </span>
-      </Details>
-      <Links>
-        {social.map(({ id, name, link, icon }) => (
+      </StyledDetails>
+      <StyledLinks>
+        {SocialIcons.map(({ id, name, link, icon }) => (
           <a key={id} href={link} target="_blank" rel="noopener noreferrer" aria-label={`follow me on ${name}`}>
             <img width="24" src={icon} alt={name} />
           </a>
         ))}
-      </Links>
-    </Flex>
-  </Wrapper>
+      </StyledLinks>
+    </StyledFlex>
+  </StyledFooterWrapper>
 );
