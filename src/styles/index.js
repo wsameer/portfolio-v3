@@ -4,4 +4,3 @@ export * from './Grid';
 export * from './Container';
 export * from './GlobalStyle';
 export * from './Input';
-export * from './SEO';
