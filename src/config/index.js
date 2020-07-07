@@ -12,6 +12,32 @@ module.exports = {
     youtube: 'https://www.youtube.com/user/wsameer',
     google: 'https://plus.google.com/u/0/wsameer',
   },
+  SocialIcons: [
+    {
+      id: 1,
+      name: 'Github',
+      link: 'https://github.com/wsameer',
+      icon: '/icons/github.svg',
+    },
+    {
+      id: 2,
+      name: 'LinkedIn',
+      link: 'https://www.linkedin.com/in/wsameer',
+      icon: '/icons/linkedin.svg',
+    },
+    {
+      id: 3,
+      name: 'Instagram',
+      link: 'https://www.instagram.com/the_savage_lens/',
+      icon: '/icons/instagram.svg',
+    },
+    {
+      id: 4,
+      name: 'Skype',
+      link: 'skype:ftb_sameer',
+      icon: '/icons/skype.svg',
+    },
+  ],
   // googleAnalyticsID: 'UA-88875900-4',
   themeColor: '#6b63ff',
   backgroundColor: '#6b63ff',
