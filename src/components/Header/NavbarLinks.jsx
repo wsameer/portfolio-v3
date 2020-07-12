@@ -16,7 +16,6 @@ const NavbarLinksWrapper = styled.div`
 
   /* desktop */
   @media only screen and (min-width: 992px) {
-    float: right;
     letter-spacing: 0.05rem;
     line-height: 2.2rem;
 

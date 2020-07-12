@@ -3,13 +3,9 @@ import styled from 'styled-components';
 
 const HamburgerWrapper = styled.div`
   z-index: 5;
-  top: 1.2rem;
-  right: 1.8rem;
-  display: block;
-
+  margin-right: 1.3rem;
   cursor: pointer;
   transition: left 500ms cubic-bezier(0.6, 0.05, 0.28, 0.91);
-  position: absolute;
 
   /* desktop */
   @media only screen and (min-width: 992px) {
