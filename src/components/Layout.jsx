@@ -1,8 +1,7 @@
 import React from 'react';
 import '../styles/fonts.css';
 import { GlobalStyle } from 'styles';
-import { Header } from 'components/Header';
-import { Footer } from './Footer.jsx';
+import { Header, Footer } from 'components';
 
 export const Layout = ({ children }) => (
   <>
