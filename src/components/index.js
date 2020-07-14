@@ -1,0 +1,9 @@
+export { Intro } from './Intro';
+export { About } from './About';
+export { Contact } from './Contact';
+export { Work } from './Work';
+export { Experience } from './Experience';
+export { Header } from './Header';
+export { Footer } from './Footer';
+export { SEO } from './SEO';
+export { Layout } from './Layout';
