@@ -5,9 +5,10 @@ import NavbarLinks from './NavbarLinks';
 const NavbarCollapseWrapper = styled.div`
   background-color: #2d3031;
   z-index: 4;
-  overflow: hidden;
+  opacity: ${({ sidebarOpen }) => (sidebarOpen ? '1' : '0')};
   max-height: ${({ sidebarOpen }) => (sidebarOpen ? '100%' : '0')};
-  transition: max-height 0.3s ease-out;
+  overflow: hidden;
+  transition: all 0.3s ease-out;
 
   @media only screen and(min-width: 992px) {
     display: none;
