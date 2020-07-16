@@ -11,6 +11,7 @@ import {
   legalName,
   foundingDate,
   logo,
+  fontAwesomeIcons,
 } from 'config/index.js';
 
 export const SEO = ({ title = defaultTitle, description = defaultDescription, location = '' }) => {
@@ -60,6 +61,7 @@ export const SEO = ({ title = defaultTitle, description = defaultDescription, lo
 
       <script type="application/ld+json">{structuredDataOrganization}</script>
       <link rel="publisher" href={socialLinks.google} />
+      <link rel="stylesheet" href={fontAwesomeIcons} />
       <title>{title}</title>
       <html lang="en" dir="ltr" />
     </Helmet>
