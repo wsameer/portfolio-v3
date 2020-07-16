@@ -5,28 +5,37 @@ import { TimelineContent } from './TimelineContent';
 
 const StyledTimeLineWrapper = styled.div`
   position: relative;
-  margin: 15px;
+  margin-right: 30px;
+  margin-bottom: 20px;
   padding: 30px;
   border-radius: 20px;
   background-color: #2d3031;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+
+  /* desktop */
+  @media only screen and (min-width: 992px) {
+    margin-bottom: 0px;
+  }
 `;
 
 const StyledTimeLineContainer = styled.div`
   padding-left: 50px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   position: relative;
   background-color: transparent;
-  width: 100%;
+  width: 90%;
 
   &:after {
-    content: 'f0f2';
+    /* content: '\f0f2'; */
+    content: ${({ metaData }) => (metaData === 'education' ? "'\f19d'" : "'\f0f2'")};
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
     background: #2d3031;
-    font-family: simple-line-icons;
-    font-size: 24px;
+    font-size: 20px;
     color: #ff4c60;
     position: absolute;
-    left: -7px;
+    padding: 2px 0;
+    left: ${({ metaData }) => (metaData === 'education' ? '-8px' : '-6px')};
     top: 0;
     z-index: 1;
   }
@@ -41,13 +50,17 @@ const StyledVerticalLine = styled.span`
   left: 34px;
 `;
 
-export const TimeLine = ({ data }) => (
-  <StyledTimeLineWrapper>
-    {data.map(d => (
-      <StyledTimeLineContainer>
-        <TimelineContent data={d} />
-      </StyledTimeLineContainer>
-    ))}
-    <StyledVerticalLine />
-  </StyledTimeLineWrapper>
-);
+export const TimeLine = ({ data, metaData }) => {
+  console.log(metaData);
+
+  return (
+    <StyledTimeLineWrapper>
+      {data.map((d, i) => (
+        <StyledTimeLineContainer key={i} metaData={metaData}>
+          <TimelineContent data={d} />
+        </StyledTimeLineContainer>
+      ))}
+      <StyledVerticalLine />
+    </StyledTimeLineWrapper>
+  );
+};
