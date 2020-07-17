@@ -12,6 +12,8 @@ module.exports = {
     youtube: 'https://www.youtube.com/user/wsameer',
     google: 'https://plus.google.com/u/0/wsameer',
   },
+  fontAwesomeIcons: 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/solid.min.css',
+  simpleLineIcons: 'https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css',
   SocialIcons: [
     {
       id: 1,
