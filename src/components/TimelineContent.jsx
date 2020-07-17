@@ -13,7 +13,7 @@ const StyledTime = styled.span`
 `;
 
 const StyledEmployer = styled.h3`
-  color: #fe5029;
+  color: #f4eee;
   font-size: 20px;
   margin-top: 10px;
   font-weight: 500;
@@ -23,12 +23,15 @@ const StyledEmployer = styled.h3`
 const StyledJobTitle = styled.p`
   font-weight: 400;
   margin-bottom: 30px;
-  font-size: 18px;
-  color: #fe5029;
+  font-size: 16px;
 `;
 
 const StyledReadMore = styled.a`
   font-size: 12px;
+  display: flex;
+  margin-top: -45px;
+  flex-direction: row-reverse;
+  opacity: 0.7;
 
   &:hover {
     cursor: pointer;
@@ -38,7 +41,6 @@ const StyledReadMore = styled.a`
 
 export const TimelineContent = ({ data }) => {
   const [open, setOpen] = useState(false);
-
   const toggleAccordion = () => setOpen(!open);
 
   return (
@@ -53,7 +55,7 @@ export const TimelineContent = ({ data }) => {
         </>
       )}
 
-      {data.major && <p>{data.major}</p>}
+      {data.major && <StyledJobTitle>{data.major}</StyledJobTitle>}
     </StyledContent>
   );
 };
