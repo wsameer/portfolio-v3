@@ -33,7 +33,7 @@ const StyledNavbarWrapper = styled.div`
 
 const Navbar = ({ sidebar, toggleSidebar }) => (
   <StyledNavbarWrapper sidebar as={Container}>
-    <AnchorLink offset="50" href="#intro">
+    <AnchorLink offset="50" href="#hero">
       <img src={logo} alt="" />
     </AnchorLink>
     <NavbarLinks desktop />
