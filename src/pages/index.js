@@ -1,14 +1,21 @@
 import React from 'react';
-import { Intro, About, Contact, Work, Experience, SEO } from 'components';
+import PropTypes from 'prop-types';
+import { Hero, About, Contact, Work, Experience, SEO } from 'components';
 import { Layout } from 'components/Layout';
 
-export default () => (
+const IndexPage = ({ data }) => (
   <Layout>
     <SEO />
-    <Intro />
+    <Hero />
     <About />
     <Experience />
     <Work />
     <Contact />
   </Layout>
 );
+
+IndexPage.propTypes = {
+  data: PropTypes.object.isRequired,
+};
+
+export default IndexPage;
