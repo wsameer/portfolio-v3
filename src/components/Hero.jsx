@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { Container, Button } from 'styles';
 import styled from 'styled-components';
@@ -148,25 +149,35 @@ const Links = SocialIcons.map((item, index) => (
   </StyledListLineItems>
 ));
 
-export const Hero = () => (
-  <StyledHeroSection id="hero">
-    <StyledHeroWrapper as={Container}>
-      <StyledLineElement>
-        <StyledListLine>
-          <StyledListLineItems>
-            <StyledHorizLine />
-          </StyledListLineItems>
-          {Links}
-        </StyledListLine>
-        <StyledDetails>
-          <h3>Hi there, I'm</h3>
-          <h1>Sameer Waskar.</h1>
-          <p>I'm a Full Stack Engineer based in Pune, India.</p>
-          <Button as={AnchorLink} href="#contact">
-            Get in touch
-          </Button>
-        </StyledDetails>
-      </StyledLineElement>
-    </StyledHeroWrapper>
-  </StyledHeroSection>
-);
+export const Hero = ({ data }) => {
+  const { frontmatter } = data[0].node;
+
+  return (
+    <StyledHeroSection id="hero">
+      <StyledHeroWrapper as={Container}>
+        <StyledLineElement>
+          <StyledListLine>
+            <StyledListLineItems>
+              <StyledHorizLine />
+            </StyledListLineItems>
+            {Links}
+          </StyledListLine>
+          <StyledDetails>
+            <h3>{frontmatter.title}</h3>
+            <h1>{frontmatter.name}</h1>
+            <p>{frontmatter.subTitle}</p>
+            <Button as={AnchorLink} href="#contact">
+              {frontmatter.buttonText}
+            </Button>
+          </StyledDetails>
+        </StyledLineElement>
+      </StyledHeroWrapper>
+    </StyledHeroSection>
+  );
+};
+
+// Hero.propTypes = {
+//   data: PropTypes.array.isRequired,
+// };
+
+// export default Hero;
