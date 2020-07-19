@@ -1,9 +1,9 @@
 {
-  "name": "portfolio",
+  "name": "portfolio-v3",
   "private": true,
-  "description": "A simple portfolio for developers",
+  "description": "My personal portfolio v3",
   "version": "0.1.2",
-  "author": "Smakosh <ismai23l@hotmail.com>",
+  "author": "Sameer <dev.wsameer@gmail.com>",
   "dependencies": {
     "axios": "^0.19.2",
     "dotenv": "^6.2.0",
@@ -17,9 +17,12 @@
     "gatsby-plugin-nprogress": "^2.0.7",
     "gatsby-plugin-offline": "^3.0.14",
     "gatsby-plugin-react-helmet": "^3.0.2",
-    "gatsby-plugin-sharp": "^2.2.13",
+    "gatsby-plugin-robots-txt": "^1.5.1",
+    "gatsby-plugin-sharp": "^2.6.19",
     "gatsby-plugin-sitemap": "^2.0.3",
     "gatsby-plugin-styled-components": "^3.0.4",
+    "gatsby-remark-external-links": "0.0.4",
+    "gatsby-remark-images": "^3.3.19",
     "gatsby-remark-prismjs": "^3.5.10",
     "gatsby-source-filesystem": "^2.3.20",
     "gatsby-source-graphql": "^2.1.21",
@@ -63,13 +66,14 @@
     "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-react": "^7.12.4",
     "eslint-plugin-react-hooks": "^1.3.0",
+    "gatsby-remark-code-titles": "^1.1.0",
     "prettier": "^1.19.1"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:smakosh/gatsby-portfolio-dev.git"
+    "url": "https://github.com/wsameer/portfolio-v3"
   },
   "bugs": {
-    "url": "https://github.com/smakosh/gatsby-portfolio-dev/issues"
+    "url": "https://github.com/wsameer/portfolio-v3/issues"
   }
 }
