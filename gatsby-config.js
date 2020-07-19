@@ -9,6 +9,7 @@ module.exports = {
     title: config.defaultTitle,
     description: config.defaultDescription,
     author: config.author,
+    siteUrl: config.url,
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -34,13 +35,6 @@ module.exports = {
         showSpinner: false,
       },
     },
-    // {
-    //   resolve: 'gatsby-plugin-google-analytics',
-    //   options: {
-    //     trackingId: config.googleAnalyticsID,
-    //     head: true,
-    //   },
-    // },
     {
       resolve: 'gatsby-plugin-favicon',
       options: {
@@ -60,10 +54,17 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: `content`,
+        path: `${__dirname}/content/`,
+      },
+    },
+    {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: config.defaultTitle,
-        short_name: 'starter',
+        short_name: config.defaultTitle,
         start_url: '/',
         background_color: config.backgroundColor,
         theme_color: config.themeColor,
@@ -72,5 +73,12 @@ module.exports = {
       },
     },
     'gatsby-plugin-offline',
+    // {
+    //   resolve: 'gatsby-plugin-google-analytics',
+    //   options: {
+    //     trackingId: config.googleAnalyticsID,
+    //     head: true,
+    //   },
+    // },
   ],
 };
