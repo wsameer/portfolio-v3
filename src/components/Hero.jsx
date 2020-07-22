@@ -61,7 +61,7 @@ const StyledDetails = styled.div`
     padding: 0;
 
     @media (min-width: 768px) {
-      font-size: 5.5rem;
+      font-size: 5.8rem;
     }
   }
 
