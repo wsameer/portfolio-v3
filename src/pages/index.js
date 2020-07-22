@@ -3,15 +3,16 @@ import React from 'react';
 import { Hero, About, Contact, Work, Experience, SEO } from 'components';
 import { Layout } from 'components/Layout';
 import { graphql } from 'gatsby';
+import Img from 'gatsby-image';
 
 const IndexPage = ({ data }) => {
-  const { hero } = data; // data[xxx] holds your post data
+  const { hero, about } = data; // data[xxx] holds your post data
 
   return (
     <Layout>
       <SEO />
       <Hero data={hero.edges} />
-      <About />
+      <About data={about.edges} />
       <Experience />
       <Work />
       <Contact />
@@ -35,10 +36,23 @@ export const pageQuery = graphql`
       edges {
         node {
           frontmatter {
-            title
+            greeting
             name
             subtitle
             buttonText
+          }
+          html
+        }
+      }
+    }
+    about: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/about/" } }) {
+      edges {
+        node {
+          frontmatter {
+            pageTitle
+            alt
+            skillsOne
+            skillsTwo
           }
           html
         }
