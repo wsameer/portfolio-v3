@@ -88,18 +88,26 @@ const education = [
   },
 ];
 
-export const Experience = () => (
-  <ExperienceSection id="experience">
-    <ExperienceWrapper as={Container}>
-      <PageTitle>Experience & Education</PageTitle>
-      <Row>
-        <Col md={6} sm={12}>
-          <TimeLine data={work} metaData="experience" />
-        </Col>
-        <Col md={6} sm={12}>
-          <TimeLine data={education} metaData="education" />
-        </Col>
-      </Row>
-    </ExperienceWrapper>
-  </ExperienceSection>
-);
+export const Experience = ({ workData }) => {
+  console.log(workData);
+
+  const { frontmatter } = workData[0].node;
+
+  console.log(frontmatter);
+
+  return (
+    <ExperienceSection id="experience">
+      <ExperienceWrapper as={Container}>
+        <PageTitle>Experience & Education</PageTitle>
+        <Row>
+          <Col md={6} sm={12}>
+            <TimeLine data={frontmatter} metaData="experience" />
+          </Col>
+          <Col md={6} sm={12}>
+            <TimeLine data={education} metaData="education" />
+          </Col>
+        </Row>
+      </ExperienceWrapper>
+    </ExperienceSection>
+  );
+};
