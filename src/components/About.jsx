@@ -80,7 +80,7 @@ const Thumbnail = styled.div`
     margin-bottom: 2rem;
 
     img {
-      height: 250px;
+      height: 280px;
       float: left;
       margin-bottom: 0;
     }
@@ -109,7 +109,7 @@ export const About = ({ data }) => {
         <Row>
           <Col xs={12} sm={4} md={4}>
             <Thumbnail>
-              <img src={dev} alt="I’m Sameer and I’m a full-stack engineer!" />
+              <img src={dev} alt={alt} />
             </Thumbnail>
           </Col>
           <Col xs={12} sm={8} md={8}>
