@@ -1,8 +1,8 @@
 ---
-date: "24-04-2017"
-employer: "Securly Softwares (India) Pvt Ltd., Pune"
-title: "Senior Software Engineer"
-tenure: "Apr 2017 - Aug 2020"
+date: "2017-04-24"
+timeline: "Apr 2017 - Aug 2020"
+title: "Securly Softwares (India) Pvt Ltd."
+subTitle: "Senior Software Engineer"
 location: "Pune, India"
 url: "https://www.securly.com/"
 responsibilites:
