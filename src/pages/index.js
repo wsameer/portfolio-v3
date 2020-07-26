@@ -12,7 +12,7 @@ const IndexPage = ({ data }) => {
       <SEO />
       <Hero data={hero.edges} />
       <About data={about.edges} />
-      <Experience workData={work.edges} />
+      <Experience work={work.edges} />
       <Work />
       <Contact />
     </Layout>
@@ -56,9 +56,9 @@ export const pageQuery = graphql`
       edges {
         node {
           frontmatter {
-            employer
+            timeline
             title
-            tenure
+            subTitle
             location
             url
             responsibilites
