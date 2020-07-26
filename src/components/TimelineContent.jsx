@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { Button } from 'styles';
 import { Accordion } from './Accordion';
 
 const StyledContent = styled.div`
@@ -48,10 +47,10 @@ export const TimelineContent = ({ data }) => {
       <StyledTime>{data.timeline}</StyledTime>
       <StyledEmployer>{data.title}</StyledEmployer>
       <StyledJobTitle>{data.subTitle}</StyledJobTitle>
-      {data.responsibilies && (
+      {data.responsibilites && (
         <>
           <StyledReadMore onClick={toggleAccordion}>{open ? 'Hide More' : 'Read More'}</StyledReadMore>
-          <Accordion points={data.responsibilies} open={open} />
+          <Accordion points={data.responsibilites} open={open} />
         </>
       )}
 
