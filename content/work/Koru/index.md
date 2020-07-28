@@ -1,7 +1,7 @@
 ---
 date: "2020-08-18"
 timeline: "Aug 2020 - Present"
-title: "Koru UX Design LL"
+title: "Koru UX Design LLP"
 subTitle: "Lead Front End Developer"
 location: "Pune, India"
 url: "https://www.securly.com/"
