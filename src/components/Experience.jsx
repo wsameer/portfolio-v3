@@ -34,22 +34,7 @@ const PageTitle = styled.h2`
   margin-bottom: 3rem;
 `;
 
-const education = [
-  // {
-  //   timeline: '2013-2015',
-  //   title: 'Savitribai Phule Pune University',
-  //   subTitle: 'Master of Science (M.Sc.)',
-  //   major: 'Computer Science',
-  // },
-  // {
-  //   timeline: '2010 - 2013',
-  //   title: 'Savitribai Phule Pune University',
-  //   subTitle: 'Bachelor of Science (B.Sc.)',
-  //   major: 'Computer Science',
-  // },
-];
-
-export const Experience = ({ work }) => (
+export const Experience = ({ work, education }) => (
   <ExperienceSection id="experience">
     <ExperienceWrapper as={Container}>
       <PageTitle>Experience & Education</PageTitle>
