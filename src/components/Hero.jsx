@@ -25,7 +25,7 @@ const StyledHeroWrapper = styled.div`
   justify-content: space-between;
 
   @media (min-width: 768px) {
-    padding: 4rem 0;
+    padding: 3rem 0;
     margin-top: 40px;
   }
 `;
@@ -61,7 +61,7 @@ const StyledDetails = styled.div`
     padding: 0;
 
     @media (min-width: 768px) {
-      font-size: 5.8rem;
+      font-size: 7rem;
     }
   }
 
