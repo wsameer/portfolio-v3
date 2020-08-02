@@ -12,17 +12,27 @@ const StyledTime = styled.span`
 `;
 
 const StyledEmployer = styled.h3`
-  color: #f4eee;
-  font-size: 20px;
+  font-size: 18px;
   margin-top: 10px;
   font-weight: 500;
   margin-bottom: 5px;
+  color: #f4eeeb;
+
+  /* desktop */
+  @media only screen and (min-width: 992px) {
+    font-size: 20px;
+  }
 `;
 
 const StyledJobTitle = styled.p`
   font-weight: 400;
   margin-bottom: 30px;
-  font-size: 16px;
+  font-size: 14px;
+
+  /* desktop */
+  @media only screen and (min-width: 992px) {
+    font-size: 16px;
+  }
 `;
 
 const StyledReadMore = styled.a`
