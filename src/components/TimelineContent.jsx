@@ -59,7 +59,7 @@ export const TimelineContent = ({ data }) => {
       <StyledJobTitle>{data.subTitle}</StyledJobTitle>
       {data.responsibilites && (
         <>
-          <StyledReadMore onClick={toggleAccordion}>{open ? 'Hide More' : 'Read More'}</StyledReadMore>
+          <StyledReadMore onClick={toggleAccordion}>{open ? 'Show less' : 'Show more'}</StyledReadMore>
           <Accordion points={data.responsibilites} open={open} />
         </>
       )}
