@@ -6,8 +6,14 @@ import { Header, Footer } from 'components';
 export const Layout = ({ children }) => (
   <>
     <GlobalStyle />
+
     <Header />
+
+    {/* <Social/>
+    <Email/> */}
+
     {children}
+
     <Footer />
   </>
 );
