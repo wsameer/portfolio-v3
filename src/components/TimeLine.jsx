@@ -5,7 +5,6 @@ import { TimelineContent } from './TimelineContent';
 
 const StyledTimeLineWrapper = styled.div`
   position: relative;
-  margin-right: 30px;
   margin-bottom: 20px;
   padding: 30px;
   border-radius: 20px;
@@ -15,11 +14,12 @@ const StyledTimeLineWrapper = styled.div`
   /* desktop */
   @media only screen and (min-width: 992px) {
     margin-bottom: 0px;
+    margin-right: 30px;
   }
 `;
 
 const StyledTimeLineContainer = styled.div`
-  padding-left: 50px;
+  padding-left: 30px;
   margin-bottom: 30px;
   position: relative;
   background-color: transparent;
@@ -38,6 +38,11 @@ const StyledTimeLineContainer = styled.div`
     top: 0;
     z-index: 1;
   }
+
+  /* desktop */
+  @media only screen and (min-width: 992px) {
+    padding-left: 50px;
+  }
 `;
 
 const StyledVerticalLine = styled.span`
@@ -53,7 +58,7 @@ export const TimeLine = ({ data, metaData }) => (
   <StyledTimeLineWrapper>
     {data.map((d, i) => (
       <StyledTimeLineContainer key={i} metaData={metaData}>
-        <TimelineContent data={d} />
+        <TimelineContent data={d.node.frontmatter} />
       </StyledTimeLineContainer>
     ))}
     <StyledVerticalLine />
