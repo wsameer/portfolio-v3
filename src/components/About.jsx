@@ -1,3 +1,4 @@
+/* eslint-disable react/no-danger */
 import React from 'react';
 import { Container, Row, Col } from 'styles';
 import dev from 'assets/illustrations/sameer-waskar.png';
@@ -98,7 +99,6 @@ const UnorderedList = styled.ul`
 `;
 
 export const About = ({ data }) => {
-  console.log(data);
   const { frontmatter, html } = data[0].node;
   const { pageTitle, skillsOne, skillsTwo, alt } = frontmatter;
 
