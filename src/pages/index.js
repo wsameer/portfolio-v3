@@ -5,8 +5,7 @@ import { Layout } from 'components/Layout';
 import { graphql } from 'gatsby';
 
 const IndexPage = ({ data }) => {
-  const { hero, about, work, education } = data; // data[xxx] holds your post data
-
+  const { hero, about, work, education, contact } = data; // data[xxx] holds your post data
   return (
     <Layout>
       <SEO />
@@ -14,7 +13,7 @@ const IndexPage = ({ data }) => {
       <About data={about.edges} />
       <Experience work={work.edges} education={education.edges} />
       <Work />
-      <Contact />
+      <Contact data={contact.edges} />
     </Layout>
   );
 };
@@ -78,6 +77,18 @@ export const pageQuery = graphql`
             subTitle
             major
           }
+        }
+      }
+    }
+    contact: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/contact/" } }) {
+      edges {
+        node {
+          frontmatter {
+            pageTitle
+            buttonText
+            buttonHref
+          }
+          html
         }
       }
     }
