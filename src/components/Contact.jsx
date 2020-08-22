@@ -40,17 +40,18 @@ const StyledMailTo = styled(Button)`
   }
 `;
 
-export const Contact = () => (
-  <StyledContactWrapper as={Container} id="contact">
-    <StyledPageTitle>Let's Build Something Together</StyledPageTitle>
-    <Row>
-      <Col sm={6}>
-        <StyledMessage>
-          Feel free to reach out if you're looking for a developer, have a question, want consultation on your project,
-          grab a coffee, or just want to say hi. I'll try my best to get back to you!
-        </StyledMessage>
-        <StyledMailTo href="mailto:dev.wsameer@gmail.com?Subject=Hello">dev.wsameer@gmail[dot]com</StyledMailTo>
-      </Col>
-    </Row>
-  </StyledContactWrapper>
-);
+export const Contact = ({ data }) => {
+  const { frontmatter, html } = data[0].node;
+  const { pageTitle, buttonText, buttonHref } = frontmatter;
+  return (
+    <StyledContactWrapper as={Container} id="contact">
+      <StyledPageTitle>{pageTitle}</StyledPageTitle>
+      <Row>
+        <Col sm={6}>
+          <StyledMessage dangerouslySetInnerHTML={{ __html: html }} />
+          <StyledMailTo href={buttonHref}>{buttonText}</StyledMailTo>
+        </Col>
+      </Row>
+    </StyledContactWrapper>
+  );
+};
