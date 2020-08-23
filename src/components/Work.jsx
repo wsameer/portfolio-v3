@@ -129,24 +129,25 @@ export const Work = () => {
       <WorksWrapper as={Container}>
         <PageTitle>Work</PageTitle>
         <Grid>
-          {edges.map(({ node }) => (
-            <Item key={node.id} as="a" href={node.url} target="_blank" rel="noopener noreferrer">
-              <Card>
-                <Content>
-                  <h4>{node.name}</h4>
-                  <p>{node.description}</p>
-                </Content>
-                <Stats>
-                  <div>
-                    <span>{node.stargazers.totalCount}</span>
-                  </div>
-                  <div>
-                    <span>{node.forkCount}</span>
-                  </div>
-                </Stats>
-              </Card>
-            </Item>
-          ))}
+          {/* {edges &&
+            edges.map(({ node }) => (
+              <Item key={node.id} as="a" href={node.url} target="_blank" rel="noopener noreferrer">
+                <Card>
+                  <Content>
+                    <h4>{node.name}</h4>
+                    <p>{node.description}</p>
+                  </Content>
+                  <Stats>
+                    <div>
+                      <span>{node.stargazers.totalCount}</span>
+                    </div>
+                    <div>
+                      <span>{node.forkCount}</span>
+                    </div>
+                  </Stats>
+                </Card>
+              </Item>
+            ))} */}
         </Grid>
       </WorksWrapper>
     </WorksSection>

@@ -1,12 +1,10 @@
 import React from 'react';
-import footerIllustration from 'assets/illustrations/footer.svg';
 import styled from 'styled-components';
 import { Container } from 'styles';
 import { SocialIcons } from '../config';
 
 const StyledFooterWrapper = styled.div`
   padding: 28rem 0 4rem 0;
-  background-image: url(${footerIllustration});
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
