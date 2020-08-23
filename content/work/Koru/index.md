@@ -2,7 +2,7 @@
 date: "2020-08-18"
 timeline: "Aug 2020 - Present"
 title: "Koru UX Design LLP"
-subTitle: "Head of Development - Front-end"
+subTitle: "Head of Development - Front end"
 location: "Pune, India"
 url: "https://www.koruux.com/"
 responsibilites:
