@@ -67,6 +67,7 @@ const StyledDetails = styled.div`
 
     &:hover {
       color: #f4eeeb;
+      cursor: pointer;
     }
   }
 
