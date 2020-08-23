@@ -2,9 +2,9 @@
 date: "2020-08-18"
 timeline: "Aug 2020 - Present"
 title: "Koru UX Design LLP"
-subTitle: "Lead Front End Developer"
+subTitle: "Head of Development - Front-end"
 location: "Pune, India"
-url: "https://www.securly.com/"
+url: "https://www.koruux.com/"
 responsibilites:
   - Work with Design head and PM to plan and execute front-end projects, ensuring that the development team has the appropriate information to be successful.
   - Solve complex technical problems and communicate the solution to non-technical management and peers.
