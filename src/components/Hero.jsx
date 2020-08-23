@@ -54,14 +54,19 @@ const StyledDetails = styled.div`
 
   h1 {
     font-size: 2.5rem;
-    color: #f4eeeb;
+    color: transparent;
     font-weight: 400;
     letter-spacing: 0.1rem;
     margin-bottom: 15px;
     padding: 0;
+    -webkit-text-stroke: 2px #f4eeeb;
 
     @media (min-width: 768px) {
       font-size: 7rem;
+    }
+
+    &:hover {
+      color: #f4eeeb;
     }
   }
 
