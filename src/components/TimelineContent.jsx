@@ -48,23 +48,35 @@ const StyledReadMore = styled.a`
   }
 `;
 
+const StyledLink = styled.a`
+  color: #f4eeeb;
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
 export const TimelineContent = ({ data }) => {
   const [open, setOpen] = useState(false);
   const toggleAccordion = () => setOpen(!open);
+  const { timeline, title, subTitle, url, major, responsibilites } = data;
 
   return (
     <StyledContent>
-      <StyledTime>{data.timeline}</StyledTime>
-      <StyledEmployer>{data.title}</StyledEmployer>
-      <StyledJobTitle>{data.subTitle}</StyledJobTitle>
-      {data.responsibilites && (
+      <StyledTime>{timeline}</StyledTime>
+      <StyledEmployer>
+        <StyledLink href={url} target="_blank" rel="noreferrer">
+          {title}
+        </StyledLink>
+      </StyledEmployer>
+      <StyledJobTitle>{subTitle}</StyledJobTitle>
+      {responsibilites && (
         <>
           <StyledReadMore onClick={toggleAccordion}>{open ? 'Show less' : 'Show more'}</StyledReadMore>
-          <Accordion points={data.responsibilites} open={open} />
+          <Accordion points={responsibilites} open={open} />
         </>
       )}
 
-      {data.major && <StyledJobTitle>{data.major}</StyledJobTitle>}
+      {major && <StyledJobTitle>{major}</StyledJobTitle>}
     </StyledContent>
   );
 };
