@@ -4,7 +4,7 @@ import { Container, Row, Col } from 'styles';
 import dev from 'assets/illustrations/sameer-waskar.png';
 import styled from 'styled-components';
 
-const Wrapper = styled.div`
+const StyledWrapper = styled.div`
   background-size: contain;
   background-position: left top;
   background-repeat: no-repeat;
@@ -17,7 +17,7 @@ const Wrapper = styled.div`
   }
 `;
 
-const AboutWrapper = styled.div`
+const StyledAboutWrapper = styled.div`
   padding: 4rem 0;
   display: block;
   align-items: center;
@@ -29,14 +29,14 @@ const AboutWrapper = styled.div`
   }
 `;
 
-const PageTitle = styled.h2`
+const StyledPageTitle = styled.h2`
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 1.2;
   margin-bottom: 3rem;
 `;
 
-const Details = styled.div`
+const StyledDetails = styled.div`
   padding: 1rem;
   border-radius: 20px;
 
@@ -62,7 +62,7 @@ const Details = styled.div`
   }
 `;
 
-const Thumbnail = styled.div`
+const StyledThumbnail = styled.div`
   text-align: center;
 
   img {
@@ -88,7 +88,7 @@ const Thumbnail = styled.div`
   }
 `;
 
-const UnorderedList = styled.ul`
+const StyledUnorderedList = styled.ul`
   font-size: 14px;
   color: #ccc;
 
@@ -98,35 +98,51 @@ const UnorderedList = styled.ul`
   }
 `;
 
-export const About = ({ data }) => {
-  const { frontmatter, html } = data[0].node;
-  const { pageTitle, skillsOne, skillsTwo, alt } = frontmatter;
+export const About = () => {
+  const pageTitle = 'About Me';
+  const alt = 'I’m Sameer and I’m a full-stack engineer!';
+
+  const skillsOne = ['JavaScript (ES6+)', 'React', 'AngularJS & Angular'];
+  const skillsTwo = ['HTML & (S)CSS', 'JAM Stack', 'Node.js & PHP'];
+  const one = `Hello! I am Sameer, a Senior Software Engineer based in Pune, India.`;
+  const two = `I am a JavaScript ninja, offering 5+ years of experience in developing things that dwell on the
+  internet. Be it a static or a dynamic web application, custom component/plugin, responsive website, or
+  anything in between, I have got it all covered.`;
+  const three = `My aim is to deliver pixel perfect user interfaces built on top of modern JavaScript based frameworks
+  ensuring responsiveness and cross-browser support.`;
+  const four = `Here are a few technologies I've been working with recently:`;
+
+  const data = [one, two, three, four];
 
   return (
-    <Wrapper id="about">
-      <AboutWrapper as={Container}>
-        <PageTitle>{pageTitle}</PageTitle>
+    <StyledWrapper id="about">
+      <StyledAboutWrapper as={Container}>
+        <StyledPageTitle>{pageTitle}</StyledPageTitle>
         <Row>
           <Col xs={12} sm={4} md={4}>
-            <Thumbnail>
+            <StyledThumbnail>
               <img src={dev} alt={alt} />
-            </Thumbnail>
+            </StyledThumbnail>
           </Col>
           <Col xs={12} sm={8} md={8}>
-            <Details>
-              <div dangerouslySetInnerHTML={{ __html: html }} />
+            <StyledDetails>
+              <div>{data && data.map((d, i) => <p key={i}>{d}</p>)}</div>
               <Row>
                 <Col xs="6">
-                  <UnorderedList>{skillsOne && skillsOne.map((skill, i) => <li key={i}>{skill}</li>)}</UnorderedList>
+                  <StyledUnorderedList>
+                    {skillsOne && skillsOne.map((skill, i) => <li key={i}>{skill}</li>)}
+                  </StyledUnorderedList>
                 </Col>
                 <Col xs="6">
-                  <UnorderedList>{skillsTwo && skillsTwo.map((skill, i) => <li key={i}>{skill}</li>)}</UnorderedList>
+                  <StyledUnorderedList>
+                    {skillsTwo && skillsTwo.map((skill, i) => <li key={i}>{skill}</li>)}
+                  </StyledUnorderedList>
                 </Col>
               </Row>
-            </Details>
+            </StyledDetails>
           </Col>
         </Row>
-      </AboutWrapper>
-    </Wrapper>
+      </StyledAboutWrapper>
+    </StyledWrapper>
   );
 };
