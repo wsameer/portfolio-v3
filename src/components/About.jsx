@@ -101,7 +101,6 @@ const StyledUnorderedList = styled.ul`
 export const About = () => {
   const pageTitle = 'About Me';
   const alt = 'I’m Sameer and I’m a full-stack engineer!';
-
   const skillsOne = ['JavaScript (ES6+)', 'React', 'AngularJS & Angular'];
   const skillsTwo = ['HTML & (S)CSS', 'JAM Stack', 'Node.js & PHP'];
   const one = `Hello! I am Sameer, a Senior Software Engineer based in Pune, India.`;
