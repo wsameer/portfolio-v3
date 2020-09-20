@@ -40,9 +40,13 @@ const StyledMailTo = styled(Button)`
   }
 `;
 
-export const Contact = ({ data }) => {
-  const { frontmatter, html } = data[0].node;
-  const { pageTitle, buttonText, buttonHref } = frontmatter;
+export const Contact = () => {
+  const html = `Feel free to reach out if you're looking for a developer, have a question, want consultation on your project, grab
+  a coffee, or just want to say hi. I'll try my best to get back to you!`;
+  const pageTitle = `Let's Build Something Together!`;
+  const buttonText = `dev.wsameer@gmail[dot]com`;
+  const buttonHref = `mailto:dev.wsameer@gmail.com?Subject=Hello`;
+
   return (
     <StyledContactWrapper as={Container} id="contact">
       <StyledPageTitle>{pageTitle}</StyledPageTitle>
