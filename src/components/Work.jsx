@@ -1,8 +1,6 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import { Container, Card } from 'styles';
-import starIcon from 'assets/icons/star.svg';
-import forkIcon from 'assets/icons/fork.svg';
 import styled from 'styled-components';
 
 const WorksSection = styled.div`
@@ -92,44 +90,43 @@ const Stats = styled.div`
   }
 `;
 
-export const Work = () => {
-  const {
-    github: {
-      viewer: {
-        repositories: { edges },
-      },
-    },
-  } = useStaticQuery(
-    graphql`
-      {
-        github {
-          viewer {
-            repositories(first: 10, orderBy: { field: STARGAZERS, direction: DESC }) {
-              edges {
-                node {
-                  id
-                  name
-                  url
-                  description
-                  stargazers {
-                    totalCount
-                  }
-                  forkCount
-                }
-              }
-            }
-          }
-        }
-      }
-    `
-  );
+export const Work = () => (
+  // const {
+  //   github: {
+  //     viewer: {
+  //       repositories: { edges },
+  //     },
+  //   },
+  // } = useStaticQuery(
+  //   graphql`
+  //     {
+  //       github {
+  //         viewer {
+  //           repositories(first: 10, orderBy: { field: STARGAZERS, direction: DESC }) {
+  //             edges {
+  //               node {
+  //                 id
+  //                 name
+  //                 url
+  //                 description
+  //                 stargazers {
+  //                   totalCount
+  //                 }
+  //                 forkCount
+  //               }
+  //             }
+  //           }
+  //         }
+  //       }
+  //     }
+  //   `
+  // );
 
-  return (
-    <WorksSection id="work">
-      <WorksWrapper as={Container}>
-        <PageTitle>Work</PageTitle>
-        <Grid>
-          {/* {edges &&
+  <WorksSection id="work">
+    <WorksWrapper as={Container}>
+      <PageTitle>Work</PageTitle>
+      {/* <Grid>
+          {edges &&
             edges.map(({ node }) => (
               <Item key={node.id} as="a" href={node.url} target="_blank" rel="noopener noreferrer">
                 <Card>
@@ -147,9 +144,8 @@ export const Work = () => {
                   </Stats>
                 </Card>
               </Item>
-            ))} */}
-        </Grid>
-      </WorksWrapper>
-    </WorksSection>
-  );
-};
+            ))}
+        </Grid> */}
+    </WorksWrapper>
+  </WorksSection>
+);
