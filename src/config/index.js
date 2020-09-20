@@ -40,7 +40,6 @@ module.exports = {
       icon: '/icons/skype.svg',
     },
   ],
-  // googleAnalyticsID: 'UA-88875900-4',
   themeColor: '#6b63ff',
   backgroundColor: '#6b63ff',
   address: {
