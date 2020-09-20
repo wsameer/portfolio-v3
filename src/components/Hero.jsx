@@ -154,7 +154,7 @@ const Links = SocialIcons.map((item, index) => (
   </StyledListLineItems>
 ));
 
-export const Hero = ({ data }) => {
+export const Hero = () => {
   const greeting = <h3>Hi there, I'm</h3>;
   const name = <h1>Sameer Waskar.</h1>;
   const subTitle = <p>I'm a Full Stack Engineer based in Pune, India.</p>;
