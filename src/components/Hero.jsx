@@ -155,7 +155,16 @@ const Links = SocialIcons.map((item, index) => (
 ));
 
 export const Hero = ({ data }) => {
-  const { frontmatter } = data[0].node;
+  const greeting = <h3>Hi there, I'm</h3>;
+  const name = <h1>Sameer Waskar.</h1>;
+  const subTitle = <p>I'm a Full Stack Engineer based in Pune, India.</p>;
+  const ctaButton = (
+    <Button as={AnchorLink} href="#contact">
+      Get In Touch
+    </Button>
+  );
+
+  const uiElements = [greeting, name, subTitle, ctaButton];
 
   return (
     <StyledHeroSection id="hero">
@@ -168,12 +177,9 @@ export const Hero = ({ data }) => {
             {Links}
           </StyledListLine>
           <StyledDetails>
-            <h3>{frontmatter.greeting}</h3>
-            <h1>{frontmatter.name}</h1>
-            <p>{frontmatter.subtitle}</p>
-            <Button as={AnchorLink} href="#contact">
-              {frontmatter.buttonText}
-            </Button>
+            {uiElements.map((e, i) => (
+              <React.Fragment key={i}>{e}</React.Fragment>
+            ))}
           </StyledDetails>
         </StyledLineElement>
       </StyledHeroWrapper>
