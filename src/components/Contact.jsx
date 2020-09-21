@@ -52,7 +52,7 @@ export const Contact = () => {
       <StyledPageTitle>{pageTitle}</StyledPageTitle>
       <Row>
         <Col sm={6}>
-          <StyledMessage dangerouslySetInnerHTML={{ __html: html }} />
+          <StyledMessage>{html}</StyledMessage>
           <StyledMailTo href={buttonHref}>{buttonText}</StyledMailTo>
         </Col>
       </Row>
