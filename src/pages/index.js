@@ -1,7 +1,6 @@
 /* eslint-disable react/no-danger */
 import React from 'react';
-import { Hero, About, Contact, Work, Experience, SEO } from 'components';
-import { Layout } from 'components/Layout';
+import { Layout, Hero, About, Contact, Work, Experience, SEO } from 'components';
 import { graphql } from 'gatsby';
 
 const IndexPage = ({ data }) => {
